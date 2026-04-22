@@ -1,8 +1,8 @@
 name: "gudfish's blog"
 description: "gudfish的个人技术博客"
 
-avatar: https://pianfan.github.io/images/shark.png
-favicon: https://pianfan.github.io/images/shark.png
+avatar: https://gudfish.github.io/images/shark.png
+favicon: https://gudfish.github.io/images/shark.png
 
 navigation:
   - name: 首页
