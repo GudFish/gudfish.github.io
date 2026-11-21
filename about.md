@@ -1,17 +1,14 @@
 ---
 layout: page
-title: About
+title: About this website
+section: about
 permalink: /about/
 ---
 
-## 关于我
+For my biography and contact details, please visit the [homepage]({{ '/' | relative_url }}).
 
-你好，我是gudfish，目前是一名机械电子专业的在校生。
+This website collects my research, publications, and technical notes. Blog posts retain their original language. If you have questions or find an error, please [contact me](mailto:{{ site.author.email }}).
 
-这是我基于 GitHub Pages 平台创建的个人博客，用于记录我的学习与心得，或者介绍我做过的项目。
+## Copyright
 
-如果你对我的文章有任何疑问，或者发现文章中存在错误，可以通过邮件与我联系。
-
-## 版权声明
-
-本博客文章都是我的原创文章，版权归我所有，转载请与我联系获得授权许可。
+Unless otherwise indicated, blog articles are original work. Please contact me for permission before reproducing them.

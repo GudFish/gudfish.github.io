@@ -1,0 +1,54 @@
+# Keep newest publications first. Fill github with a full repository URL when ready.
+# Abstracts are editorial summaries. Images are replaceable conceptual schematics.
+- id: parallel-graph-inference
+  year: 2026
+  title: "Parallel Graph Inference for Decentralized and Asynchronous Multi-Robot Cooperative Localization Under Limited Connectivity"
+  authors: "Qirong Tang, <strong>Haoyu Liu</strong>, Min Yu, and Yuanxiang Wang"
+  venue: "IEEE Robotics and Automation Letters (RA-L)"
+  citation: >-
+    Qirong Tang, Haoyu Liu, Min Yu, and Yuanxiang Wang*, "Parallel graph inference for decentralized and asynchronous multi-robot cooperative localization under limited connectivity," IEEE Robotics and Automation Letters (RA-L), 11(10): 12120-12127, 2026.
+  abstract: "This work studies decentralized cooperative localization for robot teams with limited connectivity. It introduces parallel graph inference to handle asynchronous information exchange, addressing state estimation when inter-robot measurements are delayed or communication is intermittent."
+  image: /images/research/parallel-graph.svg
+  image_alt: "Conceptual diagram of local robot graphs connected by asynchronous measurements"
+  image_caption: "Cooperative localization · Conceptual illustration"
+  paper: https://ieeexplore.ieee.org/document/11673300
+  doi: 10.1109/LRA.2026.3729488
+  github: ""
+  bibtex: |-
+    @article{tang2026parallel,
+      author = {Tang, Qirong and Liu, Haoyu and Yu, Min and Wang, Yuanxiang},
+      title = {Parallel Graph Inference for Decentralized and Asynchronous Multi-Robot Cooperative Localization Under Limited Connectivity},
+      journal = {IEEE Robotics and Automation Letters},
+      volume = {11},
+      number = {10},
+      pages = {12120--12127},
+      year = {2026},
+      doi = {10.1109/LRA.2026.3729488}
+    }
+
+
+- id: risk-aware-planning
+  year: 2026
+  title: "Explicit Risk-Aware Belief Space Planning for Underwater Active Cooperative Localization"
+  authors: "<strong>Haoyu Liu</strong>, Min Yu, Yuanxiang Wang, Wenkai Zhang, and Qirong Tang"
+  venue: "Ocean Engineering"
+  citation: >-
+    Haoyu Liu, Min Yu, Yuanxiang Wang, Wenkai Zhang, and Qirong Tang*, "Explicit risk-aware belief space planning for underwater active cooperative localization," Ocean Engineering, 346: 123710, 2026.
+  abstract: "This work investigates belief-space motion planning for active cooperative localization of autonomous underwater vehicles. It explicitly accounts for uncertainty and collision risk, using an external relaxation of joint chance constraints to support less conservative planning."
+  image: /images/research/belief-space.svg
+  image_alt: "Conceptual diagram of underwater vehicle paths and uncertainty ellipses around an obstacle"
+  image_caption: "Belief-space planning · Conceptual illustration"
+  paper: https://www.sciencedirect.com/science/article/pii/S002980182503392X
+  doi: 10.1016/j.oceaneng.2025.123710
+  github: ""
+  bibtex: |-
+    @article{liu2026explicit,
+      author = {Liu, Haoyu and Yu, Min and Wang, Yuanxiang and Zhang, Wenkai and Tang, Qirong},
+      title = {Explicit Risk-Aware Belief Space Planning for Underwater Active Cooperative Localization},
+      journal = {Ocean Engineering},
+      volume = {346},
+      pages = {123710},
+      year = {2026},
+      doi = {10.1016/j.oceaneng.2025.123710}
+    }
+

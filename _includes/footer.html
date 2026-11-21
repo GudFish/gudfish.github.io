@@ -1,5 +1,4 @@
-{% include svg-icons.html %}
-
-{% if site.footer-text %}
-<p>{{ site.footer-text }}</p>
-{% endif %}
+<div class="footer-inner">
+  <p>© {{ site.time | date: '%Y' }} Haoyu Liu</p>
+  <p>Tongji University <span aria-hidden="true">·</span> <a href="{{ site.author.github }}">GitHub</a></p>
+</div>

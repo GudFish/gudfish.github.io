@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="264" viewBox="0 0 400 264">
+<rect width="400" height="264" fill="#f8fafc"/>
+<g stroke="#dce4ec" stroke-width="1" opacity=".55"><path d="M28 50h344M28 90h344M28 130h344M28 170h344M28 210h344M50 30v200M100 30v200M150 30v200M200 30v200M250 30v200M300 30v200M350 30v200"/></g>
+<path d="M181 124l29-29 35 10 16 33-18 29-38 3-25-23Z" fill="#d5dce3" stroke="#a9b5c1"/>
+<path d="M44 192C94 177 110 115 146 88S232 40 278 67s43 48 77 51" stroke="#345e83" stroke-width="2.5" fill="none"/>
+<path d="M42 210c85 11 93-11 145-12s95 17 127-17 25-47 42-63" stroke="#7a9698" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+<g stroke="#7f9cb5" fill="#dce8f1" fill-opacity=".5"><ellipse cx="99" cy="147" rx="23" ry="12" transform="rotate(-53 99 147)"/><ellipse cx="163" cy="77" rx="24" ry="13" transform="rotate(-20 163 77)"/><ellipse cx="247" cy="58" rx="24" ry="13" transform="rotate(6 247 58)"/><ellipse cx="312" cy="94" rx="22" ry="12" transform="rotate(40 312 94)"/></g>
+<g fill="#345e83"><circle cx="99" cy="147" r="3"/><circle cx="163" cy="77" r="3"/><circle cx="247" cy="58" r="3"/><circle cx="312" cy="94" r="3"/><path d="m43 186 14 4-12 9Z"/><path d="m349 111 11 7-11 7Z"/></g>
+<path d="M123 199 163 77M271 204 247 58" stroke="#a1b4c0" stroke-width="1.2" stroke-dasharray="3 5"/>
+<g font-family="Arial,sans-serif" font-size="11" fill="#627285"><text x="30" y="173">Start</text><text x="342" y="102">Goal</text><text x="198" y="143">Obstacle</text><text x="29" y="244">Planned motion</text><path d="M120 240h26" stroke="#345e83" stroke-width="2"/><text x="168" y="244">State uncertainty</text><ellipse cx="289" cy="240" rx="14" ry="6" stroke="#7f9cb5" fill="#dce8f1"/></g>
+</svg>

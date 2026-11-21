@@ -1,0 +1,24 @@
+{% assign pub = include.publication %}
+<article id="{{ pub.id }}" class="publication{% if include.compact %} publication-compact{% endif %}">
+  <figure class="publication-figure">
+    <a href="{{ pub.paper }}" tabindex="-1" aria-hidden="true"><img src="{{ pub.image | relative_url }}" alt="{{ pub.image_alt | escape }}" width="400" height="264" loading="lazy"></a>
+    {% unless include.compact %}<figcaption>{{ pub.image_caption }}</figcaption>{% endunless %}
+  </figure>
+  <div class="publication-content">
+    <h3><a href="{{ pub.paper }}">{{ pub.title }}</a></h3>
+    <p class="publication-authors">{{ pub.authors }}</p>
+    <p class="publication-venue">{{ pub.venue }} <span class="muted">· {{ pub.year }}</span></p>
+    {% unless include.compact %}
+    <p class="publication-abstract"><span class="abstract-label">Abstract (summary).</span> {{ pub.abstract }}</p>
+    {% endunless %}
+    <div class="publication-links">
+      <a href="{{ pub.paper }}">{% include icon.html name='paper' %} Paper</a>
+      <button type="button" class="cite-button" data-citation="{{ pub.citation | escape }}" data-bibtex="{{ pub.bibtex | escape }}" aria-haspopup="dialog" aria-controls="citation-dialog">{% include icon.html name='cite' %} Cite</button>
+      {% if pub.github and pub.github != '' %}
+      <a href="{{ pub.github }}">{% include icon.html name='github' %} GitHub</a>
+      {% else %}
+      <span class="code-pending">{% include icon.html name='github' %} Code · coming soon</span>
+      {% endif %}
+    </div>
+  </div>
+</article>

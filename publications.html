@@ -1,0 +1,17 @@
+---
+layout: default
+title: Publications
+section: publications
+permalink: /publications/
+description: Selected publications by Haoyu Liu on multi-robot cooperative localization and risk-aware planning.
+---
+<header class="page-heading">
+  <p class="eyebrow">Research output</p>
+  <h1>Publications</h1>
+  <p>Selected work on cooperative localization and planning under uncertainty.<br>See also <a href="{{ site.author.scholar }}">Google Scholar <span aria-hidden="true">↗</span></a>.</p>
+</header>
+<div class="year-heading"><h2>2026</h2><span>Journal articles</span></div>
+{% for publication in site.data.publications %}
+  {% include publication.html publication=publication %}
+{% endfor %}
+<p class="publication-note">Abstracts are concise summaries. Illustrations are conceptual schematics; please see the linked papers for the original figures and full abstracts.</p>

@@ -1,6 +1,9 @@
 # jekyll local file
 .jekyll*
 _site
+.sass-cache/
+.bundle/
+vendor/bundle/
 *.ppt
 *.pptx
 *.DS_Store

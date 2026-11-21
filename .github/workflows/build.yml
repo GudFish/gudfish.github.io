@@ -1,30 +1,33 @@
-name: Build and Test
+name: Build Jekyll site
 
 on:
   push:
     branches:
       - main
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-      
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v4.0.1
+    - name: Check out repository
+      uses: actions/checkout@v4
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
       with:
-        node-version: 20
-        
-    - run: npm install -g bats
-    
-    - run: bats -v
-      
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v4.3.0
+        ruby-version: '3.3'
+        bundler-cache: true
+
+    - name: Build website
+      run: bundle exec jekyll build --strict_front_matter
+      env:
+        JEKYLL_ENV: production
+
+    - name: Upload built website
+      uses: actions/upload-artifact@v4
       with:
         name: 'my-blog'
         path: '_site'
-        

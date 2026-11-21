@@ -1,0 +1,15 @@
+<dialog id="citation-dialog" class="citation-dialog" aria-labelledby="citation-heading" aria-describedby="citation-text">
+  <div class="citation-dialog-header">
+    <h2 id="citation-heading">Cite this paper</h2>
+    <form method="dialog"><button class="citation-close" aria-label="Close citation dialog">×</button></form>
+  </div>
+  <div class="citation-toolbar">
+    <div class="citation-formats" role="group" aria-label="Citation format">
+      <button type="button" data-format="normal" aria-pressed="true">Normal</button>
+      <button type="button" data-format="bibtex" aria-pressed="false">BibTeX</button>
+    </div>
+    <button type="button" id="copy-citation" class="copy-citation">Copy</button>
+  </div>
+  <pre id="citation-text" class="citation-text"></pre>
+  <span id="citation-status" role="status" aria-live="polite"></span>
+</dialog>

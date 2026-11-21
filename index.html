@@ -1,89 +1,42 @@
 ---
 layout: default
+title: About
+section: about
 ---
-<div class="search-container">
-  <input type="text" id="search-input" placeholder="search blog posts..." style="width: 90%;
-    height: 35px;
-    background-color: rgba(227,231,236,.2);
-    line-height: 35px;
-    margin-top: 20px;
-    padding:10px 16px;
-    border: 1px solid #c0c0c0;
-    font-size: 16px;
-    border-radius: 17px;
-    outline: none;
-    box-sizing: border-box;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);">
-  <ul id="results-container"></ul>
+<div class="profile-layout">
+  <div class="profile-main">
+    <header class="profile-heading">
+      <h1>Haoyu Liu</h1>
+      <p class="role">Ph.D. Student · Robotics</p>
+      <p class="affiliation">Tongji University</p>
+    </header>
+    <section class="about-copy" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <p>I am a Ph.D. student at Tongji University. My interests include cooperative localization, motion planning, and underwater robotics.</p>
+      <p>Here I share my research, publications, and technical notes.</p>
+    </section>
+    <section class="home-section" aria-labelledby="interests-title">
+      <div class="section-heading"><h2 id="interests-title">Research interests</h2><a href="{{ '/research/' | relative_url }}">Explore research <span aria-hidden="true">↗</span></a></div>
+      <ul class="interest-list">
+        <li>Multi-robot cooperative localization</li>
+        <li>Belief-space planning and decision-making under uncertainty</li>
+        <li>Underwater robotics and electrical control systems</li>
+      </ul>
+    </section>
+    <section class="home-section" aria-labelledby="education-title">
+      <h2 id="education-title">Education</h2>
+      <div class="education-row"><span class="muted">2022 — present</span><div><strong>Tongji University</strong><p>Ph.D. studies</p></div></div>
+      <div class="education-row"><span class="muted">2018 — 2022</span><div><strong>Southwest Jiaotong University</strong><p>Bachelor</p></div></div>
+    </section>
+  </div>
+  <aside class="profile-aside" aria-label="Avatar and contact information">
+    <img class="portrait" src="{{ site.avatar | relative_url }}" alt="GudFish shark avatar" width="192" height="192">
+    {% include contact-links.html %}
+  </aside>
 </div>
-
-<!--script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script-->
-<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
-
-<script>
-	window.simpleJekyllSearch = new SimpleJekyllSearch({
-	searchInput: document.getElementById('search-input'),
-	resultsContainer: document.getElementById('results-container'),
-	json: '{{ site.baseurl }}/search.json',
-	searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
-	noResultsText: 'No results found',
-	limit: 10,
-	fuzzy: false,
-	exclude: ['Welcome']
-  })
-</script>
- 
-{% if site.posts.size == 0 %}
-  <h2>No post found</h2>
-{% endif %}
-
-<div class="posts">
-  {% for post in paginator.posts %}
-  {% unless post.draft %}
-    <article class="post">
-      <h1>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h1>
-
-      <div class="meta">
-        <span class="date">
-          {{ post.date | date: "%Y-%m-%d" }}
-        </span>
-
-        <ul class="tag">
-          {% for tag in post.tags %}
-          <li>
-            <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
-              {{ tag }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-
-      <div class="entry">
-        {{ post.excerpt | truncate: 200 }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endunless %}
+<section class="selected-publications" aria-labelledby="selected-title">
+  <div class="section-heading"><h2 id="selected-title">Selected publications</h2><a href="{{ '/publications/' | relative_url }}">View publications <span aria-hidden="true">↗</span></a></div>
+  {% for publication in site.data.publications %}
+    {% include publication.html publication=publication compact=true %}
   {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <span class="prev">
-      <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="prev">
-        ← 上一页
-      </a>
-    </span>
-  {% endif %}
-  {% if paginator.next_page %}
-    <span class="next">
-      <a href="{{ site.baseurl}}{{ paginator.next_page_path }}" class="next">
-        下一页 →
-      </a>
-    </span>
-  {% endif %}
-</div>
+</section>

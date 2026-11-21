@@ -1,35 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ page.lang | default: layout.lang | default: site.lang | default: 'en' }}">
   {% include head.html %}
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     {% include nav.html %}
-
-    {% if page.toc==true %}
-      <aside class="toc">
-        {% include toc.html html=content %}
-      </aside>
+    <main id="main" class="site-main{% if page.layout == 'post' %} post-main{% endif %}">
+      {{ content }}
+    </main>
+    <footer class="site-footer">{% include footer.html %}</footer>
+    {% if page.section == 'about' or page.section == 'publications' %}
+    {% include citation-dialog.html %}
+    <script src="{{ '/js/citations.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
     {% endif %}
-
-    <div id="main" role="main" class="wrapper-content">
-      <div class="container">
-        {{ content }}
-      </div>
-    </div>
-
     {% include analytics.html %}
   </body>
-
-  {% if page.toc==true %}
-  <script>
-    document.getElementById("main").classList.add("withtoc");
-  </script>
-  {% endif %}
-
-  <div class="wrapper-footer-mobile">
-    <footer class="footer">
-      {% include footer.html %}
-    </footer>
-  </div>
-  {% include theme-toggle.html %}
-
 </html>
