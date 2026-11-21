@@ -4,7 +4,7 @@ A minimal academic website built with Jekyll and hosted on GitHub Pages.
 
 - **About** (`/`): biography, research interests, education, shark avatar, and contact links.
 - **Research** (`/research/`): underwater robot system design and development (VURAM).
-- **Publications** (`/publications/`): the RA-L and Ocean Engineering papers.
+- **Publications** (`/publications/`): papers.
 - **Blog** (`/blog/`): original Chinese posts, with search and tag filters. Existing post URLs are preserved.
 
 ## 修改论文信息与 GitHub 链接
@@ -32,8 +32,6 @@ github: "https://github.com/GudFish/your-repository"
 - `research.html`：研究方向介绍。
 - `images/shark.png`：主页使用的鲨鱼头像。
 - `style.scss`：全站样式（含手机与打印布局）。
-
-论文作者、题目和引用信息参考 [旧主页](http://robotics-tongji.org/members/D04-haoyuliu)，DOI 与出版信息通过 Crossref 核对。概述基于论文题目及可访问的出版商资料，不替代论文原文。
 
 ## 博客
 
