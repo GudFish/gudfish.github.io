@@ -39,8 +39,6 @@ button, input { font: inherit; }
 .site-name { display: inline-flex; align-items: center; font-weight: 600; font-size: 17px; color: var(--ink); white-space: nowrap; }
 .header-logo { display: block; width: 36px; height: 36px; object-fit: contain; }
 .site-name:hover { text-decoration: none; }
-.header-separator { color: #c1c7ce; margin: 0 10px; font-weight: 400; }
-.header-descriptor { font-size: 12px; font-weight: 400; color: var(--muted); }
 .site-nav { display: flex; gap: 29px; align-self: stretch; }
 .site-nav a { display: flex; align-items: center; font-size: 13px; color: #5e6772; border-bottom: 2px solid transparent; margin-bottom: -1px; }
 .site-nav a:hover { color: var(--link); text-decoration: none; }
@@ -181,7 +179,6 @@ figcaption { font-size: 10px; color: var(--muted); line-height: 1.6; margin-top:
 .post-pagination span, .post-pagination a { display: block; }
 .post-pagination span { font-size: 10px; margin-bottom: 5px; }
 @media (max-width: 850px) {
-  .header-descriptor, .header-separator { display: none; }
   .profile-layout { gap: 40px; grid-template-columns: minmax(0,1fr) 190px; }
   .research-topic { grid-template-columns: minmax(0,1fr) 230px; gap: 30px; }
   .blog-toolbar { flex-wrap: wrap; }
